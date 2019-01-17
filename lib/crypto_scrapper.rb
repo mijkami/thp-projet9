@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'open-uri'
 require 'nokogiri'
 
@@ -28,7 +26,6 @@ def crypto_scrapper
   name_cryptos.size.times do |i|
     array_result << [name_cryptos[i] => price_cryptos[i]]
   end
-  puts array_result.map {|x| x.values}
   return array_result
 end
 
