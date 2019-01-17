@@ -30,7 +30,7 @@ def crypto_scrapper
 end
 
 def perform
-  crypto_scrapper
+  puts crypto_scrapper
 end
 
 perform

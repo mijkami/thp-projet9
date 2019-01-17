@@ -6,7 +6,6 @@ URL_PATH = 'http://www2.assemblee-nationale.fr/deputes/liste/alphabetique'
 def deputies
 
   name_deputies = []
-puts "start"
   page = Nokogiri::HTML(open(URL_PATH))
   # récup des noms
   # names_pages = page.xpath("//div[@id='deputes-list']")
@@ -14,11 +13,11 @@ puts "start"
   names_pages.each do |name_deputy|
     name_deputies << name_deputy.text 
   end
-  puts name_deputies
+  return name_deputies
 end
 
 def perform
-  deputies
+  puts deputies
 end
 
 perform
